@@ -85,10 +85,9 @@ Actually this paper is the follow-up work of the above paper. To be more practic
 <a name="theoretical-analysis-based-1" class="anchor" href="#theoretical-analysis-based-1"><span class="octicon octicon-link"></span></a>Theoretical Analysis based:</h3>
 
 <ul>
-<li>
-<a href="http://ieeexplore.ieee.org/xpls/abs_all.jsp?arnumber=6284711&amp;tag=1">Qiaomin Xie, Yi Lu, “Degree-guided map-reduce task assignment with
-data locality constraint,” in ISIT 2012.</a> This paper presents the peeling algorithm and adopts the mean-field equations to analyze (I cannot understand it well). However, it makes an impractical assumption which is that all the tasks with data locality on the machine can be finished in a time slot with probability <em>p</em> while the tasks without data locality can only be finished with probability <em>q</em> and <strong>p &gt; q</strong>
-</li>
+<li><p><a href="http://ieeexplore.ieee.org/xpls/abs_all.jsp?arnumber=6284711&amp;tag=1">Qiaomin Xie, Yi Lu, “Degree-guided map-reduce task assignment with
+data locality constraint,” in ISIT 2012.</a> This paper presents the peeling algorithm and adopts the mean-field equations to analyze the evolution (I cannot understand it well). However, it makes an impractical assumption which is that all the tasks with data locality on the machine can be finished in a time slot with probability <em>p</em> while the tasks without data locality can only be finished with probability <em>q</em> and <strong>p &gt; q</strong>. Also the theoretical here is very complex. </p></li>
+<li><p><a href="http://inlab.lab.asu.edu/Publications/WanZhuYin_13.pdf">W. Wang, K. Zhu, L. Ying, J. Tan, L. Zhang, "Map Task Scheduling in MapReduce with Data Locality: Throughput and Heavy-Traffic Optimality," in Infocom 2013.</a>. This paper makes the same assumption as the above paper presented in ISIT 2012. Its task scheduling algorithm include two aspects which are<code>Routing</code> and <code>Scheduling</code>. The purpose of routing is to keep load balancing for all the machines. Also scheduling process makes a very simple decision based on the length of queues. It adopts the Lyapunov function to prove the stability of the algorithm.</p></li>
 </ul><h3>
 <a name="heuristic-based-1" class="anchor" href="#heuristic-based-1"><span class="octicon octicon-link"></span></a>Heuristic based:</h3>
 
@@ -105,12 +104,12 @@ data locality constraint,” in ISIT 2012.</a> This paper presents the peeling a
 <a name="heuristic-based-2" class="anchor" href="#heuristic-based-2"><span class="octicon octicon-link"></span></a>Heuristic based:</h3>
 
 <ul>
-<li><a href="http://www.computer.org/csdl/trans/tc/preprint/06419699-abs.html">Qi Chen, Chen Liu, Zhen Xiao, "Improving MapReduce Performance Using Smart Speculative Execution Strategy," in transactions of Computer Networks.</a></li>
-<li><a href="http://www.usenix.org/legacy/event/osdi10/tech/full_papers/Ananthanarayanan.pdf">G. Ananthanarayanan, S. Kandula, A. Greenberg, I. Stoica, Y. Lu, B.
+<li><p><a href="http://www.computer.org/csdl/trans/tc/preprint/06419699-abs.html">Qi Chen, Chen Liu, Zhen Xiao, "Improving MapReduce Performance Using Smart Speculative Execution Strategy," in transactions of Computer Networks.</a></p></li>
+<li><p><a href="http://www.usenix.org/legacy/event/osdi10/tech/full_papers/Ananthanarayanan.pdf">G. Ananthanarayanan, S. Kandula, A. Greenberg, I. Stoica, Y. Lu, B.
 Saha, E. Harris, “Reining in the Outliers in MapReduce Clusters using
-Mantri,” in USENIX OSDI, Oct 2010.</a></li>
-<li><a href="http://bnrg.eecs.berkeley.edu/%7Erandy/Courses/CS268.F08/papers/42_osdi_08.pdf">M. Zaharia, A. Konwinski, A. D. Joseph, R. Katz, and I. Stoica,
-“Improving mapreduce performance in heterogeneous environments,” in OSDI 2008.</a></li>
+Mantri,” in USENIX OSDI, Oct 2010.</a></p></li>
+<li><p><a href="http://bnrg.eecs.berkeley.edu/%7Erandy/Courses/CS268.F08/papers/42_osdi_08.pdf">M. Zaharia, A. Konwinski, A. D. Joseph, R. Katz, and I. Stoica,
+“Improving mapreduce performance in heterogeneous environments,” in OSDI 2008.</a></p></li>
 </ul><p>You can <a href="https://github.com/blog/821" class="user-mention">@mention</a> a GitHub username to generate a link to their profile. The resulting <code>&lt;a&gt;</code> element will link to the contributor's GitHub Profile. For example: In 2007, Chris Wanstrath (<a href="https://github.com/defunkt" class="user-mention">@defunkt</a>), PJ Hyett (<a href="https://github.com/pjhyett" class="user-mention">@pjhyett</a>), and Tom Preston-Werner (<a href="https://github.com/mojombo" class="user-mention">@mojombo</a>) founded GitHub.</p>
 
 <h3>
