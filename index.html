@@ -1,44 +1,36 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <title>Paper read summary for MapReduce by hgm900611</title>
-    <link rel="stylesheet" href="stylesheets/styles.css">
-    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-    <script src="javascripts/main.js"></script>
-    <!--[if lt IE 9]>
-      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
 
+  <head>
+    <meta charset='utf-8' />
+    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
+    <meta name="description" content="Paper read summary for MapReduce : " />
+
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+
+    <title>Paper read summary for MapReduce</title>
   </head>
+
   <body>
 
-      <header>
-        <h1>Paper read summary for MapReduce</h1>
-        <p></p>
-      </header>
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/hgm900611/paper_1">View on GitHub</a>
 
-      <div id="banner">
-        <span id="logo"></span>
+          <h1 id="project_title">Paper read summary for MapReduce</h1>
+          <h2 id="project_tagline"></h2>
 
-        <a href="https://github.com/hgm900611/paper_1" class="button fork"><strong>View On GitHub</strong></a>
-        <div class="downloads">
-          <span>Downloads:</span>
-          <ul>
-            <li><a href="https://github.com/hgm900611/paper_1/zipball/master" class="button">ZIP</a></li>
-            <li><a href="https://github.com/hgm900611/paper_1/tarball/master" class="button">TAR</a></li>
-          </ul>
-        </div>
-      </div><!-- end banner -->
+            <section id="downloads">
+              <a class="zip_download_link" href="https://github.com/hgm900611/paper_1/zipball/master">Download this project as a .zip file</a>
+              <a class="tar_download_link" href="https://github.com/hgm900611/paper_1/tarball/master">Download this project as a tar.gz file</a>
+            </section>
+        </header>
+    </div>
 
-    <div class="wrapper">
-      <nav>
-        <ul></ul>
-      </nav>
-      <section>
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
         <blockquote>
 <p>This page includes my paper read summary for MapReduce. I will mainly talks about three important issues including:</p>
 
@@ -94,7 +86,7 @@ data locality constraint,” in ISIT 2012.</a> This paper presents the peeling a
 
 <ul>
 <li><p><a href="http://www.sigops.org/sosp/sosp09/papers/isard-sosp09.pdf">Michael Isard, Vijayan Prabhakaran, Jon Currey, Udi Wieder, Kunal Talwar and Andrew Goldberg, "Quincy: Fair Scheduling for Distributed Computing Clusters," in SOSP 2009.</a> This is the first paper to address the data locality issue and fairness problem in MapReduce-like systems. It encodes the scheduling as a flow network. In this network, the edge weights encode the demands of data locality and fairness. This is a very novel and beautiful work. </p></li>
-<li><p><a href="http://dl.acm.org/citation.cfm?id=1755940">Matei Zaharia, Dhruba Borthakur, Joydeep Sen Sarma, Khaled Elmeleegy, Sunnyvale, Scott Shenker, Ion Stoica, "Delay scheduling: a simple technique for achieving locality and fairness in cluster scheduling," in EuroSys 2010.</a> This paper is very famous among all the papers which address the data locality issue. It presents the delay scheduling algorithm which delay the job at the head of the queue a little bit if data locality is not achieved with the available slot. </p></li>
+<li><p><a href="http://dl.acm.org/citation.cfm?id=1755940">Matei Zaharia, Dhruba Borthakur, Joydeep Sen Sarma, Khaled Elmeleegy, Sunnyvale, Scott Shenker, Ion Stoica, "Delay scheduling: a simple technique for achieving locality and fairness in cluster scheduling," in EuroSys 2010.</a> This paper is very famous among all the papers which address the data locality issue. It presents the delay scheduling algorithm which delay the job at the head of the queue a little bit if data locality is not achieved with the available slot. As described next, this algorithm has a obvious drawback: there exists a probability that some slots wont'e be launching any tasks and keeps idle all the way. This phenomenon waste the resource in the cluster and needs to be improved. </p></li>
 </ul><hr><h2>
 <a name="speculative-execution" class="anchor" href="#speculative-execution"><span class="octicon octicon-link"></span></a>Speculative execution</h2>
 
@@ -120,12 +112,17 @@ Mantri,” in USENIX OSDI, Oct 2010.</a></p></li>
 <p>Having any problems with this summary, please feel free to contact <a href="http://personal.ie.cuhk.edu.hk/%7Exh112">me</a> with the email xh112[@]ie.cuhk.edu.hk. You all are welcome to show your different opinions. </p>
 </blockquote>
       </section>
-      <footer>
-        <p>Project maintained by <a href="https://github.com/hgm900611">hgm900611</a></p>
-        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://twitter.com/michigangraham">mattgraham</a></small></p>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">Paper read summary for MapReduce maintained by <a href="https://github.com/hgm900611">hgm900611</a></p>
+        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
       </footer>
     </div>
-    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
+
     
+
   </body>
 </html>
