@@ -113,26 +113,20 @@ data locality constraint,” in ISIT 2012.</a> This paper presents the peeling a
 Large Clusters”, in USENIX OSDI, 2004.</a>
 Actually, this paper is the technical report to the MapReduce system design of Google. It talks about the back up strategy with a short paragraph. The strategy is that  when a MapReduce operation is close to complete, it will randomly choose some remaining tasks and launch the duplicates of them on alternative machines. It concludes that this speculative execution scheme can decrease the job execution time by 44%.</p></li>
 <li><p><a href="http://bnrg.eecs.berkeley.edu/%7Erandy/Courses/CS268.F08/papers/42_osdi_08.pdf">M. Zaharia, A. Konwinski, A. D. Joseph, R. Katz, and I. Stoica,
-“Improving mapreduce performance in heterogeneous environments,” in OSDI 2008.</a> In this paper, a new strategy named LATE is presented. LATE monitors the progress rate of
-the tasks and estimates their remaining time. Tasks with their
-progress rate below <em>slowTaskTherehold</em> are chosen as backup
-candidates and the one with the longest remaining time is
-given the highest priority when the number of backups in
-the cluster does not exceed <em>speculativeCap</em>.</p></li>
+“Improving mapreduce performance in heterogeneous environments,” in OSDI 2008.</a> In this paper, a new strategy named LATE is presented. LATE monitors the progress rate of the tasks and estimates their remaining time. Tasks with their progress rate below <em>slowTaskTherehold</em> are chosen as backup
+candidates and the one with the longest remaining time is given the highest priority when the number of backups in the cluster does not exceed <em>speculativeCap</em>.</p></li>
 <li><p><a href="http://www.usenix.org/legacy/event/osdi10/tech/full_papers/Ananthanarayanan.pdf">G. Ananthanarayanan, S. Kandula, A. Greenberg, I. Stoica, Y. Lu, B.
 Saha, E. Harris, “Reining in the Outliers in MapReduce Clusters using
-Mantri,” in USENIX OSDI, Oct 2010.</a></p></li>
-<li>
-<p><a href="http://www.computer.org/csdl/trans/tc/preprint/06419699-abs.html">Qi Chen, Chen Liu, Zhen Xiao, "Improving MapReduce Performance Using Smart Speculative Execution Strategy," in transactions of Computer Networks 2013.</a></p>
-
-<h3>
+Mantri,” in USENIX OSDI, Oct 2010.</a>
+This paper talks about the backup stategy of Mantri which is a large data processing syetem in Microsoft  It estimates for each task the remaining time to finish, trem, and predicts the duration of a new copy of
+the task, <code>t_new</code>. Once a slot is idle, Mantri then makes a decision whether to do backup or not based on the statistics of trem and tnew. More precisely, a duplicate is scheduled if <code>P(t_rem &gt; 2  t_new) &gt; δ</code> is satisfied. By default, δ = .25. Hence, Mantri schedules a duplicate only if the total resource consumption decreases. Moreover Mantri allows killing a task if it really takes a long time to complete the remaining work.</p></li>
+<li><p><a href="http://www.computer.org/csdl/trans/tc/preprint/06419699-abs.html">Qi Chen, Chen Liu, Zhen Xiao, "Improving MapReduce Performance Using Smart Speculative Execution Strategy," in transactions of Computer Networks 2013.</a></p></li>
+</ul><h3>
 <a name="support-or-contact" class="anchor" href="#support-or-contact"><span class="octicon octicon-link"></span></a>Support or Contact</h3>
 
 <blockquote>
 <p>Having any problems with this summary, please feel free to contact <a href="http://personal.ie.cuhk.edu.hk/%7Exh112">me</a> with the email xh112[@]ie.cuhk.edu.hk. You all are welcome to show your different opinions. </p>
 </blockquote>
-</li>
-</ul>
       </section>
       <footer>
         <p>Project maintained by <a href="https://github.com/hgm900611">hgm900611</a></p>
