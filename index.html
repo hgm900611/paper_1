@@ -1,44 +1,36 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <title>Paper read summary for MapReduce by hgm900611</title>
-    <link rel="stylesheet" href="stylesheets/styles.css">
-    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-    <script src="javascripts/main.js"></script>
-    <!--[if lt IE 9]>
-      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
 
+  <head>
+    <meta charset='utf-8' />
+    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
+    <meta name="description" content="Paper read summary for MapReduce : " />
+
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+
+    <title>Paper read summary for MapReduce</title>
   </head>
+
   <body>
 
-      <header>
-        <h1>Paper read summary for MapReduce</h1>
-        <p></p>
-      </header>
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/hgm900611/paper_1">View on GitHub</a>
 
-      <div id="banner">
-        <span id="logo"></span>
+          <h1 id="project_title">Paper read summary for MapReduce</h1>
+          <h2 id="project_tagline"></h2>
 
-        <a href="https://github.com/hgm900611/paper_1" class="button fork"><strong>View On GitHub</strong></a>
-        <div class="downloads">
-          <span>Downloads:</span>
-          <ul>
-            <li><a href="https://github.com/hgm900611/paper_1/zipball/master" class="button">ZIP</a></li>
-            <li><a href="https://github.com/hgm900611/paper_1/tarball/master" class="button">TAR</a></li>
-          </ul>
-        </div>
-      </div><!-- end banner -->
+            <section id="downloads">
+              <a class="zip_download_link" href="https://github.com/hgm900611/paper_1/zipball/master">Download this project as a .zip file</a>
+              <a class="tar_download_link" href="https://github.com/hgm900611/paper_1/tarball/master">Download this project as a tar.gz file</a>
+            </section>
+        </header>
+    </div>
 
-    <div class="wrapper">
-      <nav>
-        <ul></ul>
-      </nav>
-      <section>
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
         <p>This page includes my paper read summary for MapReduce. I will mainly talks about three important issues including:</p>
 
 <ul>
@@ -58,7 +50,7 @@
 <p><a href="http://dl.acm.org/citation.cfm?id=1989493.1989540">B. Moseley, A. Dasgupta, R. Kumar, and T. Sarlos, “On scheduling in
 map-reduce and flow-shops,” in SPAA 2011.</a> This paper seeks to minimize the <em>flowtime</em> of jobs in MapReduce which is motivated from the two-stage flow shop problem. The tasks to machine mapping is unknown and needs to be determined such that the total <em>flowtime</em> is minimized. </p>
 
-<pre><code>In our following research, we can consider optimize the job scheduling in a heterogeneous environment where the machines are not identical.
+<pre><code>In our following research, we can consider to optimize the job scheduling in a heterogeneous environment where the machines are not identical.
 </code></pre>
 </li>
 <li><p><a href="http://ieeexplore.ieee.org/xpls/abs_all.jsp?arnumber=5935152&amp;tag=1">Hyunseok Chang, Murali Kodialam, Ramana Rao Kompella, T. V. Lakshman, Myungjin Lee, Sarit Mukherjee, "Scheduling in MapReduce-like Systems for Fast completion time," in Infocom 2011.</a> This paper seeks to optimize the total completion time of job running in the Mapreduce system. It decides the scheduling order of tasks on each processor. Moreover, this paper doesn't consider the dependency between map task and reduce tasks. A linear program is formulated to relax the original problem. It then outlines a combinatorial approach to solve the LP problem.</p></li>
@@ -66,6 +58,7 @@ map-reduce and flow-shops,” in SPAA 2011.</a> This paper seeks to minimize the
 and shuffle phases in MapReduce systems,” in Infocom 2012.</a> 
 Actually this paper is the follow-up work of the above paper. To be more practical, it considers the dependency between map and reduce tasks. Moreover, it jointly optimize the job completion time by imposing the shuffle phase constraint. </p></li>
 <li><p><a href="http://dl.acm.org/citation.cfm?id=2254761">Jian Tan, Xiaoqiao Meng, Li Zhang, “Delay Tails in MapReduce Scheduling,” in SIGMETRICS 2012.</a> This paper focuses on the the starvation problem of small jobs under fair scheduler in MapReduce. The root reason of this problem is caused by launching the reduce tasks so early. To efficiently solve this issue and improve the job response performance, it presents a couple scheduler which assign the reduce tasks based on the progress of the map phase. The theoretical analysis here is very complicated. </p></li>
+<li><p><a href="http://newslab.ece.ohio-state.edu/research/resources/Analysis.pdf">Yousi Zheng, Ness Shroff, Prasun Sinha, “A New Analytical Technique for Designing Provably Efficient MapReduce Schedulers”, in Infocom 2013</a>. This paper is the first work to write down the formulation of mapreduce job scheduling including both map and reduce phases. There is no distinguish between map and reduce slots here. It uses adopts the knowledge in probability to prove that any work-conserving scheduler can achieves a constant efficiency ratio (not competitive ratio). Moreover, this paper presents the ASRPT algorithm which is inspired from the famous SRPT (Shortest remaining time first) algorithm and bound the competitive ratio to be 2.</p></li>
 </ul><h3>
 <a name="heuristic-based" class="anchor" href="#heuristic-based"><span class="octicon octicon-link"></span></a>Heuristic based:</h3>
 
@@ -101,12 +94,17 @@ Mantri,” in USENIX OSDI, Oct 2010.</a></li>
 
 <p>Having trouble with Pages? Check out the documentation at <a href="http://help.github.com/pages">http://help.github.com/pages</a> or contact <a href="mailto:support@github.com">support@github.com</a> and we’ll help you sort it out.</p>
       </section>
-      <footer>
-        <p>Project maintained by <a href="https://github.com/hgm900611">hgm900611</a></p>
-        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://twitter.com/michigangraham">mattgraham</a></small></p>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">Paper read summary for MapReduce maintained by <a href="https://github.com/hgm900611">hgm900611</a></p>
+        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
       </footer>
     </div>
-    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
+
     
+
   </body>
 </html>
