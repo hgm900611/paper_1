@@ -1,36 +1,44 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
-
   <head>
-    <meta charset='utf-8' />
-    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
-    <meta name="description" content="Paper read summary for MapReduce : " />
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Paper read summary for MapReduce by hgm900611</title>
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script src="javascripts/main.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
 
-    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
-
-    <title>Paper read summary for MapReduce</title>
   </head>
-
   <body>
 
-    <!-- HEADER -->
-    <div id="header_wrap" class="outer">
-        <header class="inner">
-          <a id="forkme_banner" href="https://github.com/hgm900611/paper_1">View on GitHub</a>
+      <header>
+        <h1>Paper read summary for MapReduce</h1>
+        <p></p>
+      </header>
 
-          <h1 id="project_title">Paper read summary for MapReduce</h1>
-          <h2 id="project_tagline"></h2>
+      <div id="banner">
+        <span id="logo"></span>
 
-            <section id="downloads">
-              <a class="zip_download_link" href="https://github.com/hgm900611/paper_1/zipball/master">Download this project as a .zip file</a>
-              <a class="tar_download_link" href="https://github.com/hgm900611/paper_1/tarball/master">Download this project as a tar.gz file</a>
-            </section>
-        </header>
-    </div>
+        <a href="https://github.com/hgm900611/paper_1" class="button fork"><strong>View On GitHub</strong></a>
+        <div class="downloads">
+          <span>Downloads:</span>
+          <ul>
+            <li><a href="https://github.com/hgm900611/paper_1/zipball/master" class="button">ZIP</a></li>
+            <li><a href="https://github.com/hgm900611/paper_1/tarball/master" class="button">TAR</a></li>
+          </ul>
+        </div>
+      </div><!-- end banner -->
 
-    <!-- MAIN CONTENT -->
-    <div id="main_content_wrap" class="outer">
-      <section id="main_content" class="inner">
+    <div class="wrapper">
+      <nav>
+        <ul></ul>
+      </nav>
+      <section>
         <blockquote>
 <p>This page includes my paper read summary for MapReduce. I will mainly talks about three important issues including:</p>
 
@@ -111,7 +119,7 @@ candidates and the one with the longest remaining time is given the highest prio
 Saha, E. Harris, “Reining in the Outliers in MapReduce Clusters using
 Mantri,” in USENIX OSDI, Oct 2010.</a>
 This paper talks about the backup stategy of Mantri which is a large data processing system in Microsoft  It estimates for each task the remaining time to finish, <code>t_rem</code>, and predicts the duration of a new copy of the task, <code>t_new</code>. Once a slot is idle, Mantri then makes a decision whether to do backup or not based on the statistics of <code>t_rem</code> and <code>t_new</code>. More precisely, a duplicate is scheduled if <code>P(t_rem &gt; 2  t_new) &gt; δ</code> is satisfied. By default, δ = .25. Hence, Mantri schedules a duplicate only if the total resource consumption decreases. Moreover Mantri allows killing a task if it really takes a long time to complete the remaining work.</p></li>
-<li><p><a href="http://www.computer.org/csdl/trans/tc/preprint/06419699-abs.html">Qi Chen, Chen Liu, Zhen Xiao, "Improving MapReduce Performance Using Smart Speculative Execution Strategy," in transactions of Computer Networks 2013.</a></p></li>
+<li><p><a href="http://www.computer.org/csdl/trans/tc/preprint/06419699-abs.html">Qi Chen, Chen Liu, Zhen Xiao, "Improving MapReduce Performance Using Smart Speculative Execution Strategy," in transactions of Computer Networks 2013.</a> This paper proposes a Smart Speculative Execution algorithm. The main contributions it makes are twofold: i) Use exponentially weighted moving average to predict process speed and compute a task’s remaining time; ii) Determine which task to backup based on the load of a cluster using a cost-benefit model.</p></li>
 </ul><h3>
 <a name="support-or-contact" class="anchor" href="#support-or-contact"><span class="octicon octicon-link"></span></a>Support or Contact</h3>
 
@@ -119,17 +127,12 @@ This paper talks about the backup stategy of Mantri which is a large data proces
 <p>Having any problems with this summary, please feel free to contact <a href="http://personal.ie.cuhk.edu.hk/%7Exh112">me</a> with the email xh112[@]ie.cuhk.edu.hk. You all are welcome to show your different opinions. </p>
 </blockquote>
       </section>
-    </div>
-
-    <!-- FOOTER  -->
-    <div id="footer_wrap" class="outer">
-      <footer class="inner">
-        <p class="copyright">Paper read summary for MapReduce maintained by <a href="https://github.com/hgm900611">hgm900611</a></p>
-        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
+      <footer>
+        <p>Project maintained by <a href="https://github.com/hgm900611">hgm900611</a></p>
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://twitter.com/michigangraham">mattgraham</a></small></p>
       </footer>
     </div>
-
+    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
     
-
   </body>
 </html>
