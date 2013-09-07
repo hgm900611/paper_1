@@ -54,14 +54,14 @@
 <a name="theoretical-analysis-based" class="anchor" href="#theoretical-analysis-based"><span class="octicon octicon-link"></span></a>Theoretical Analysis based:</h3>
 
 <ul>
-<li><a href="http://ieeexplore.ieee.org/xpls/abs_all.jsp?arnumber=5935152&amp;tag=1">Hyunseok Chang, Murali Kodialam, Ramana Rao Kompella, T. V. Lakshman, Myungjin Lee, Sarit Mukherjee, "Scheduling in MapReduce-like Systems for Fast completion time," in Infocom 2011.</a></li>
+<li><p><a href="http://dl.acm.org/citation.cfm?id=1989493.1989540">B. Moseley, A. Dasgupta, R. Kumar, and T. Sarlos, “On scheduling in
+map-reduce and flow-shops,” in SPAA 2011.</a> This paper seeks to minimize the <em>flowtime</em> of jobs in MapReduce which is motivated from the two-stage flow shop problem. The tasks to machine mapping is unknown and needs to be determined such that the total <em>flowtime</em> is minimized.</p></li>
+<li><p><a href="http://ieeexplore.ieee.org/xpls/abs_all.jsp?arnumber=5935152&amp;tag=1">Hyunseok Chang, Murali Kodialam, Ramana Rao Kompella, T. V. Lakshman, Myungjin Lee, Sarit Mukherjee, "Scheduling in MapReduce-like Systems for Fast completion time," in Infocom 2011.</a></p></li>
 <li><p>This paper seeks to optimize the total completion time of job running in the Mapreduce system. It decides the scheduling order of tasks on each processor. Moreover, this paper doesn't consider the dependency between map task and reduce tasks. A linear program is formulated to relax the original problem. It then outlines a combinatorial approach to solve the LP problem.</p></li>
 <li><p><a href="http://www.cse.psu.edu/%7Efachen/pubs/infocom12mr.pdf">F. Chen, M. Kodialam, and T. Lakshman, “Joint scheduling of processing
 and shuffle phases in MapReduce systems,” in Infocom 2012.</a> 
 Actually this paper is the follow-up work of the above paper. To be more practical, it considers the dependency between map and reduce tasks. Moreover, it jointly optimize the job completion time by imposing the shuffle phase constraint. </p></li>
-<li><p><a href="http://dl.acm.org/citation.cfm?id=2254761">Jian Tan, Xiaoqiao Meng, Li Zhang, “Delay Tails in MapReduce Scheduling,” in SIGMETRICS 12.</a> This paper focuses on the the starvation problem of small jobs under fair scheduler in MapReduce. The root reason of this problem is caused by launching the reduce tasks so early. To efficiently solve this issue and improve the job response performance, it presents a couple scheduler which assign the reduce tasks based on the progress of the map phase. The theoretical analysis here is very complicated. </p></li>
-<li><p><a href="http://dl.acm.org/citation.cfm?id=1989493.1989540">B. Moseley, A. Dasgupta, R. Kumar, and T. Sarlos, “On scheduling in
-map-reduce and flow-shops,” in SPAA 2011.</a> </p></li>
+<li><p><a href="http://dl.acm.org/citation.cfm?id=2254761">Jian Tan, Xiaoqiao Meng, Li Zhang, “Delay Tails in MapReduce Scheduling,” in SIGMETRICS 2012.</a> This paper focuses on the the starvation problem of small jobs under fair scheduler in MapReduce. The root reason of this problem is caused by launching the reduce tasks so early. To efficiently solve this issue and improve the job response performance, it presents a couple scheduler which assign the reduce tasks based on the progress of the map phase. The theoretical analysis here is very complicated. </p></li>
 </ul><h3>
 <a name="heuristic-based" class="anchor" href="#heuristic-based"><span class="octicon octicon-link"></span></a>Heuristic based:</h3>
 
