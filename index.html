@@ -95,6 +95,7 @@ data locality constraint,” in ISIT 2012.</a> This paper presents the peeling a
 <ul>
 <li><p><a href="http://www.sigops.org/sosp/sosp09/papers/isard-sosp09.pdf">Michael Isard, Vijayan Prabhakaran, Jon Currey, Udi Wieder, Kunal Talwar and Andrew Goldberg, "Quincy: Fair Scheduling for Distributed Computing Clusters," in SOSP 2009.</a> This is the first paper to address the data locality issue and fairness problem in MapReduce-like systems. It encodes the scheduling as a flow network. In this network, the edge weights encode the demands of data locality and fairness. This is a very novel and beautiful work. </p></li>
 <li><p><a href="http://dl.acm.org/citation.cfm?id=1755940">Matei Zaharia, Dhruba Borthakur, Joydeep Sen Sarma, Khaled Elmeleegy, Sunnyvale, Scott Shenker, Ion Stoica, "Delay scheduling: a simple technique for achieving locality and fairness in cluster scheduling," in EuroSys 2010.</a> This paper is very famous among all the papers which address the data locality issue. It presents the delay scheduling algorithm which delay the job at the head of the queue a little bit if data locality is not achieved with the available slot. As described next, this algorithm has a obvious drawback: there exists a probability that some slots wont'e be launching any tasks and keeps idle all the way. This phenomenon waste the resource in the cluster and needs to be improved. </p></li>
+<li><p><a href="http://researcher.watson.ibm.com/researcher/files/us-tanji/coupling2013.pdf">J. Tan, X. Meng, L. Zhang, "Coupling Task Progress for MapReduce Resource-Aware Scheduling", in Infocom 2013.</a>.</p></li>
 </ul><hr><h2>
 <a name="speculative-execution" class="anchor" href="#speculative-execution"><span class="octicon octicon-link"></span></a>Speculative execution</h2>
 
@@ -111,9 +112,7 @@ Saha, E. Harris, “Reining in the Outliers in MapReduce Clusters using
 Mantri,” in USENIX OSDI, Oct 2010.</a></p></li>
 <li><p><a href="http://bnrg.eecs.berkeley.edu/%7Erandy/Courses/CS268.F08/papers/42_osdi_08.pdf">M. Zaharia, A. Konwinski, A. D. Joseph, R. Katz, and I. Stoica,
 “Improving mapreduce performance in heterogeneous environments,” in OSDI 2008.</a></p></li>
-</ul><p>You can <a href="https://github.com/blog/821" class="user-mention">@mention</a> a GitHub username to generate a link to their profile. The resulting <code>&lt;a&gt;</code> element will link to the contributor's GitHub Profile. For example: In 2007, Chris Wanstrath (<a href="https://github.com/defunkt" class="user-mention">@defunkt</a>), PJ Hyett (<a href="https://github.com/pjhyett" class="user-mention">@pjhyett</a>), and Tom Preston-Werner (<a href="https://github.com/mojombo" class="user-mention">@mojombo</a>) founded GitHub.</p>
-
-<h3>
+</ul><h3>
 <a name="support-or-contact" class="anchor" href="#support-or-contact"><span class="octicon octicon-link"></span></a>Support or Contact</h3>
 
 <blockquote>
