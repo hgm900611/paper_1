@@ -87,16 +87,15 @@ Actually this paper is the follow-up work of the above paper. To be more practic
 <ul>
 <li>
 <a href="http://ieeexplore.ieee.org/xpls/abs_all.jsp?arnumber=6284711&amp;tag=1">Qiaomin Xie, Yi Lu, “Degree-guided map-reduce task assignment with
-data locality constraint,” in ISIT 2012.</a> </li>
+data locality constraint,” in ISIT 2012.</a> This paper presents the peeling algorithm and adopts the mean-field equations to analyze (I cannot understand it well). However, it makes an impractical assumption which is that all the tasks with data locality on the machine can be finished in a time slot with probability <em>p</em> while the tasks without data locality can only be finished with probability <em>q</em> and <strong>p &gt; q</strong>
+</li>
 </ul><h3>
 <a name="heuristic-based-1" class="anchor" href="#heuristic-based-1"><span class="octicon octicon-link"></span></a>Heuristic based:</h3>
 
 <ul>
 <li>
 <a href="http://www.sigops.org/sosp/sosp09/papers/isard-sosp09.pdf">Michael Isard, Vijayan Prabhakaran, Jon Currey, Udi Wieder, Kunal Talwar and Andrew Goldberg, "Quincy: Fair Scheduling for Distributed Computing Clusters," in SOSP 2009.</a> This is the first paper to address the data locality issue and fairness problem in MapReduce-like systems. It encodes the scheduling as a flow network. In this network, the edge weights encode the demands of data locality and fairness. This is a very novel and beautiful work. </li>
-</ul><p>*</p>
-
-<hr><h2>
+</ul><hr><h2>
 <a name="speculative-execution" class="anchor" href="#speculative-execution"><span class="octicon octicon-link"></span></a>Speculative execution</h2>
 
 <h3>
