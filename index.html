@@ -110,10 +110,15 @@ data locality constraint,” in ISIT 2012.</a> This paper presents the peeling a
 
 <ul>
 <li><p><a href="http://research.google.com/archive/mapreduce-osdi04.pdf">J. Dean and S. Ghemawat, “MapReduce: Simplified Data Processing on
-Large Clusters”, in USENIX OSDI, 2004</a>
+Large Clusters”, in USENIX OSDI, 2004.</a>
 Actually, this paper is the technical report to the MapReduce system design of Google. It talks about the back up strategy with a short paragraph. The strategy is that  when a MapReduce operation is close to complete, it will randomly choose some remaining tasks and launch the duplicates of them on alternative machines. It concludes that this speculative execution scheme can decrease the job execution time by 44%.</p></li>
 <li><p><a href="http://bnrg.eecs.berkeley.edu/%7Erandy/Courses/CS268.F08/papers/42_osdi_08.pdf">M. Zaharia, A. Konwinski, A. D. Joseph, R. Katz, and I. Stoica,
-“Improving mapreduce performance in heterogeneous environments,” in OSDI 2008.</a></p></li>
+“Improving mapreduce performance in heterogeneous environments,” in OSDI 2008.</a> In this paper, a new strategy named LATE is presented. LATE monitors the progress rate of
+the tasks and estimates their remaining time. Tasks with their
+progress rate below <em>slowTaskTherehold</em> are chosen as backup
+candidates and the one with the longest remaining time is
+given the highest priority when the number of backups in
+the cluster does not exceed <em>speculativeCap</em>.</p></li>
 <li><p><a href="http://www.usenix.org/legacy/event/osdi10/tech/full_papers/Ananthanarayanan.pdf">G. Ananthanarayanan, S. Kandula, A. Greenberg, I. Stoica, Y. Lu, B.
 Saha, E. Harris, “Reining in the Outliers in MapReduce Clusters using
 Mantri,” in USENIX OSDI, Oct 2010.</a></p></li>
